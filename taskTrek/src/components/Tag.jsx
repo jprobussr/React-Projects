@@ -1,7 +1,11 @@
 import './Tag.css';
 
-const Tag = ({ tagName }) => {
-  return <button className="tag">{tagName}</button>;
+const Tag = ({ tagName, selectTag }) => {
+  return (
+    <button type="button" className="tag" onClick={() => selectTag(tagName)}>
+      {tagName}
+    </button>
+  );
 };
 
 export default Tag;
